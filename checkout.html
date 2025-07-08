@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Artisanal Crafts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="your-logo.png" alt="Artisanal Crafts Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                 <a href="#" id="user-account-link" class="header-icon" aria-label="User Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="header-icon cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>Checkout</h1>
+                <p>Complete your purchase in a few easy steps.</p>
+            </div>
+        </section>
+
+        <section class="container page-content checkout-page-section">
+            <div class="checkout-progress" id="checkout-progress">
+                <div class="progress-step active" data-step="1">1. Shipping</div>
+                <div class="progress-step" data-step="2">2. Payment</div>
+                <div class="progress-step" data-step="3">3. Review</div>
+            </div>
+
+            <form id="checkout-form" class="checkout-form">
+                <div class="checkout-step" id="shipping-step">
+                    <h2>Shipping Information</h2>
+                    <div class="form-grid">
+                        <div class="form-field">
+                            <label for="fullName">Full Name:</label>
+                            <input type="text" id="fullName" name="fullName" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="address1">Address Line 1:</label>
+                            <input type="text" id="address1" name="address1" required>
+                        </div>
+                        <div class="form-field full-width">
+                            <label for="address2">Address Line 2 (Optional):</label>
+                            <input type="text" id="address2" name="address2">
+                        </div>
+                        <div class="form-field">
+                            <label for="city">City:</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="state">State/Province:</label>
+                            <input type="text" id="state" name="state" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="zipCode">Zip/Postal Code:</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="country">Country:</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="india">India</option>
+                                <!-- <option value="usa">United States</option> -->
+                                </select>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary next-step-btn" data-step="2">Next: Payment</button>
+                </div>
+
+                <div class="checkout-step hidden" id="payment-step">
+                    <h2>Payment Information</h2>
+                    <div class="form-field">
+                        <label for="paymentMethod">Payment Method:</label>
+                        <select id="paymentMethod" name="paymentMethod" required>
+                            <option value="">Select a method</option>
+                            <option value="credit-card">Credit Card</option>
+                            <option value="paypal">PayPal</option>
+                            <option value="cod">Cash on Delivery</option>
+                        </select>
+                    </div>
+                    <div id="credit-card-fields" class="payment-method-fields" style="display: none;">
+                        <div class="form-field">
+                            <label for="cardNumber">Card Number:</label>
+                            <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX XXXX XXXX XXXX">
+                        </div>
+                        <div class="form-grid">
+                            <div class="form-field">
+                                <label for="expMonth">Expiration Month:</label>
+                                <input type="text" id="expMonth" name="expMonth" placeholder="MM">
+                            </div>
+                            <div class="form-field">
+                                <label for="expYear">Expiration Year:</label>
+                                <input type="text" id="expYear" name="expYear" placeholder="YYYY">
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <label for="cvv">CVV:</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="XXX">
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary prev-step-btn" data-step="1">Previous</button>
+                        <button type="button" class="btn btn-primary next-step-btn" data-step="3">Next: Review Order</button>
+                    </div>
+                </div>
+
+                <div class="checkout-step hidden" id="review-step">
+                    <h2>Review Your Order</h2>
+                    <div class="order-review-details">
+                        <h3>Shipping To:</h3>
+                        <p id="review-shipping-address"></p>
+                        <h3>Payment Method:</h3>
+                        <p id="review-payment-method"></p>
+
+                        <h3>Order Items:</h3>
+                        <div id="review-order-items" class="review-items-list">
+                            </div>
+
+                        <div class="order-summary-review">
+                            <div class="summary-line">
+                                <span>Subtotal:</span>
+                                <span id="review-subtotal">₹0.00</span>
+                            </div>
+                            <div class="summary-line">
+                                <span>Shipping:</span>
+                                <span id="review-shipping">₹0.00</span>
+                            </div>
+                            <div class="summary-line total">
+                                <span>Total:</span>
+                                <span id="review-total">₹0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary prev-step-btn" data-step="2">Previous</button>
+                        <button type="submit" class="btn btn-primary" id="place-order-btn">Place Order</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Artisanal Crafts. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <div id="auth-modal" class="modal"></div>
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

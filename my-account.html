@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Account - Artisanal Crafts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="your-logo.png" alt="Artisanal Crafts Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                 <a href="#" id="user-account-link" class="header-icon" aria-label="User Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="header-icon cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <h1>My Account</h1>
+                <p>Manage your profile, orders, and preferences.</p>
+            </div>
+        </section>
+
+        <section class="container page-content my-account-section">
+            <div class="account-dashboard">
+                <aside class="account-sidebar">
+                    <nav>
+                        <ul>
+                            <li><a href="#profile" class="account-nav-link active" data-tab="profile">Profile Information</a></li>
+                            <li><a href="#orders" class="account-nav-link" data-tab="orders">My Orders</a></li>
+                            <li><a href="#addresses" class="account-nav-link" data-tab="addresses">Addresses</a></li>
+                            <li><a href="#wishlist" class="account-nav-link" data-tab="wishlist">Wishlist</a></li>
+                            <li><a href="#settings" class="account-nav-link" data-tab="settings">Account Settings</a></li>
+                            <li><a href="#" id="logout-btn">Log Out</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+                <div class="account-content">
+                    <div id="profile" class="account-tab active">
+                        <h2>Profile Information</h2>
+                        <div id="user-details">
+                            <p><strong>Name:</strong> <span id="profile-name">Not logged in</span></p>
+                            <p><strong>Email:</strong> <span id="profile-email"></span></p>
+                            <p><strong>Member Since:</strong> <span id="profile-member-since"></span></p>
+                        </div>
+                        <button class="btn btn-secondary edit-profile-btn">Edit Profile</button>
+                    </div>
+
+                    <div id="orders" class="account-tab hidden">
+                        <h2>My Orders</h2>
+                        <div id="order-history">
+                            <p id="no-orders-message" class="info-message" style="display: none;">You haven't placed any orders yet. <a href="shop.html">Start shopping!</a></p>
+                            <div id="order-list">
+                                </div>
+                        </div>
+                    </div>
+
+                    <div id="addresses" class="account-tab hidden">
+                        <h2>My Addresses</h2>
+                        <div id="address-list">
+                            <p id="no-addresses-message" class="info-message" style="display: none;">No addresses saved. Add one now!</p>
+                            </div>
+                        <button class="btn btn-primary add-address-btn">Add New Address</button>
+                    </div>
+
+                    <div id="wishlist" class="account-tab hidden">
+                        <h2>My Wishlist</h2>
+                        <div id="wishlist-items" class="grid-section">
+                            <p id="empty-wishlist-message" class="info-message" style="display: none;">Your wishlist is empty. Explore our <a href="shop.html">products</a> to add items!</p>
+                            </div>
+                    </div>
+
+                    <div id="settings" class="account-tab hidden">
+                        <h2>Account Settings</h2>
+                        <form id="account-settings-form">
+                            <div class="form-field">
+                                <label for="currentPassword">Current Password:</label>
+                                <input type="password" id="currentPassword" name="currentPassword">
+                            </div>
+                            <div class="form-field">
+                                <label for="newPassword">New Password:</label>
+                                <input type="password" id="newPassword" name="newPassword">
+                            </div>
+                            <div class="form-field">
+                                <label for="confirmNewPassword">Confirm New Password:</label>
+                                <input type="password" id="confirmNewPassword" name="confirmNewPassword">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update Password</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Artisanal Crafts. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                    <a href="faq.html">FAQ</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <div id="auth-modal" class="modal"></div>
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Artisanal Crafts</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+</head>
+<body>
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>Admin Panel</h3>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-view="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                    <li><a href="#" class="nav-link" data-view="products"><i class="fas fa-box-open"></i> Products</a></li>
+                    <li><a href="#" class="nav-link" data-view="blog"><i class="fas fa-feather-alt"></i> Blog Posts</a></li>
+                    <li><a href="#" class="nav-link" data-view="reviews"><i class="fas fa-star"></i> Reviews</a></li>
+                    <li><a href="#" class="nav-link" data-view="users"><i class="fas fa-users"></i> Users</a></li>
+                    <li><a href="../index.html" target="_blank"><i class="fas fa-globe"></i> View Website</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header class="main-header">
+                <h1 id="view-title">Dashboard</h1>
+            </header>
+            
+            <div class="content-area" id="content-area">
+                </div>
+        </main>
+    </div>
+
+    <div id="form-modal" class="modal">
+        </div>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+    <script src="admin-script.js"></script>
+</body>
+</html>

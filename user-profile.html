@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Artisanal Crafts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="your-logo.png" alt="Artisanal Crafts Logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="about.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <a href="#" id="user-account-link" class="header-icon" aria-label="User Account">
+                    <i class="fas fa-user"></i>
+                </a>
+                <a href="#" class="header-icon cart-icon-link" aria-label="Shopping Cart">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+                <div class="hamburger" id="hamburger-menu" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container" id="profile-hero">
+                </div>
+        </section>
+
+        <section class="container page-content">
+            <div class="profile-layout">
+                <aside class="profile-nav">
+                    <ul>
+                        <li><a href="#wishlist" class="active"><i class="fas fa-heart"></i> My Wishlist</a></li>
+                        <li><a href="#" id="logout-button"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                    </ul>
+                </aside>
+                <div class="profile-content">
+                    <section id="wishlist">
+                        <h2>My Wishlist</h2>
+                        <div class="grid-section" id="wishlist-grid">
+                            </div>
+                        <p id="no-wishlist-message" class="info-message" style="display: none;">Your wishlist is empty. Start exploring the shop to add items you love!</p>
+                    </section>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Artisanal Crafts. All Rights Reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms.html">Terms & Conditions</a>
+                </div>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="back-to-top" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
+
+    <div id="cart-modal" class="modal"></div>
+    <div id="auth-modal" class="modal"></div>
+    <div id="toast-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
